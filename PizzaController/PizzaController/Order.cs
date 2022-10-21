@@ -25,13 +25,17 @@ public class Order
     private State _state;
     private Collection _collection;
     private Item[] _items;
+    private Customer _customer;
+    private Clerk _clerk;
 
-    public Order()
+    public Order(Customer customer, Clerk clerk)
     {
         _id = _nextId;
         _dateTime = DateTime.Today;
         _state = State.Making;
         _collection = Collection.InProgress;
+        _customer = customer;
+        _clerk = clerk;
         _nextId++;
     }
 
@@ -40,4 +44,7 @@ public class Order
     public State State { get; set; }
     public Collection Collection { get; set; }
     public Item[] Items { get; set; }
+    
+    
 }
+
