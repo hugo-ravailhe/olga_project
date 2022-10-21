@@ -1,5 +1,13 @@
 ﻿namespace PizzaController;
 
+public enum PizzaName
+{
+    Pepperoni,
+    QuatreFromage,
+    Raclette,
+    Cannibale
+}
+
 public enum PizzaSize
 {
     M,
