@@ -130,3 +130,9 @@ dmypy.json
 
 .idea/*
 PizzaController/.idea/*
+
+PizzaController/PizzaController/bin/*
+PizzaController/PizzaController/obj/*
+PizzaController/PizzaController/.dockerignore
+
+PizzaController/PizzaController.sln.DotSettings.user
