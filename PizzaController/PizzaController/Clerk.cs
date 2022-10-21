@@ -2,8 +2,11 @@
 
 public class Clerk : Person
 {
+    
+    //*********** Constructor ***********
     public Clerk(string firstname, string name) : base(firstname, name){}
 
+    //*********** Methods ***********
     public Customer CreateCustomerAccount()
     {
         Console.WriteLine("Please enter the client's information :");
@@ -18,7 +21,7 @@ public class Clerk : Person
 
         return new Customer(firstname, lastname, phone, address);
     }
-
+    
     public void ModifyCustomerAccount(Customer c)
     {
         int choice = 0;
@@ -55,5 +58,8 @@ public class Clerk : Person
                     break;
             }
         } while (choice != 0);
+        Console.WriteLine(c.Firstname + " " + c.Lastname + "'s information :");
+        Console.WriteLine("Phone number : " + c.Phone);
+        Console.WriteLine("Address : " + c.Address);
     }
 }
