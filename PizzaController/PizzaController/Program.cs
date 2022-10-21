@@ -8,7 +8,9 @@ public class Program
     {
         // Display the number of command line arguments.
         Console.WriteLine(args.Length);
-        Order order = new Order();
-        Console.WriteLine(order.Id);
+        Order order = new Order(); 
+        Order order2 = new Order();
+        Console.WriteLine(order.Id = 2);
+        Console.WriteLine(order.DateTime);
     }
 }

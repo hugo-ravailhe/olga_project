@@ -15,6 +15,7 @@
     <ItemGroup>
       <Compile Remove="Collection.cs" />
       <Compile Remove="State.cs" />
+      <Compile Remove="User.cs" />
     </ItemGroup>
 
 </Project>

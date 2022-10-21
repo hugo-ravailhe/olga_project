@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using System;
 
 namespace PizzaController;
 
@@ -17,30 +18,26 @@ public enum State
 }
 public class Order
 {
+
+    private int _nextId = 1;
     private int _id;
-    private string _hour;
-    private string _date;
+    private DateTime  _dateTime;
     private State _state;
     private Collection _collection;
     private Item[] _items;
 
-    public Order(int id, string hour, string date, State state, Collection collection)
+    public Order()
     {
-        _id = id;
-        _hour = hour;
-        _date = date;
+        _id = _nextId;
+        _dateTime = DateTime.Today;
         _state = State.Making;
         _collection = Collection.InProgress;
-        
+        _nextId++;
     }
 
     public int Id { get; set; }
-    public string Hour { get; set; }
-    public string Date { get; set; }
+    public DateTime DateTime { get; set; }
     public State State { get; set; }
     public Collection Collection { get; set; }
     public Item[] Items { get; set; }
-    
-    
-    
 }
