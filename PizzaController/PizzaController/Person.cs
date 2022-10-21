@@ -5,9 +5,10 @@ public class Person
     private string _firstname;
     private string _lastname;
 
-    public Person()
+    public Person(string firstname, string lastname)
     {
-        
+        _firstname = firstname;
+        _lastname = lastname;
     }
     
     public string Firstname { get; set; }

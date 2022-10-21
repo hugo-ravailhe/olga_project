@@ -1,17 +1,18 @@
 ﻿namespace PizzaController;
 
-public class Customer: Person
+public class Customer : Person
 {
     private int _nextId = 1;
     private int _id;
     private int _phone;
     private string _address;
 
-    public Customer(int phone, string address)
+    public Customer(string firstname, string lastname, int phone, string address) 
+        : base (lastname, firstname)
     {
         _id = _nextId;
-        this._address = address;
         this._phone = phone;
+        this._address = address;
     }
     
     public int Id { get; set; }
