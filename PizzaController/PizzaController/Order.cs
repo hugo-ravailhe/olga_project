@@ -24,7 +24,7 @@ public class Order
     private DateTime  _dateTime;
     private State _state;
     private Collection _collection;
-    private Item[] _items;
+    private List<Item> _items;
     private Customer _customer;
     private Clerk _clerk;
 
@@ -43,7 +43,7 @@ public class Order
     public DateTime DateTime { get; set; }
     public State State { get; set; }
     public Collection Collection { get; set; }
-    public Item[] Items { get; set; }
+    public List<Item> Items { get; set; }
     
     
 }
