@@ -7,9 +7,10 @@ public class Program
     static void Main(string[] args)
     {
         // Display the number of command line arguments.
-        Console.WriteLine(args.Length);
-        Order order = new Order(); 
-        Order order2 = new Order();
+        Clerk clerk1 = new Clerk("Arnaud", "Teillet");
+        Customer customer1 = new Customer("Elisa", "Teillet", "0695516560", "Rue de la napolitaine");
+        Customer customer2 = clerk1.CreateCustomerAccount();
+        Order order = clerk1.CreateOrder(customer2);
         Console.WriteLine(order.Id = 2);
         Console.WriteLine(order.DateTime);
     }

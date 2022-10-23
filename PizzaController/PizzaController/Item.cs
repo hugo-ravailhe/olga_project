@@ -118,6 +118,7 @@ public class Pizza : Item
     //******** Getter Setter ********
     public PizzaName Name { get; set; }
     public PizzaSize Size { get; set; }
+    public PizzaState State { get; set; }
     
     
     //******** Methods ********

@@ -17,7 +17,7 @@ public class Clerk : Person
         Console.WriteLine("-- Lastname :");
         string lastname = Console.ReadLine();
         Console.WriteLine("-- Phone number :");
-        int phone = Int32.Parse(Console.ReadLine());
+        string phone = Console.ReadLine();
         Console.WriteLine("-- Address :");
         string address = Console.ReadLine();
 
@@ -46,7 +46,7 @@ public class Clerk : Person
                     break;
                 case 2:
                     Console.WriteLine("Enter the new phone number :");
-                    c.Phone = Int32.Parse(Console.ReadLine());
+                    c.Phone = Console.ReadLine();
                     Console.WriteLine(c.Firstname + " " + c.Lastname + "'s information has been changed\n\n");
                     break;
                 case 3:
@@ -94,14 +94,14 @@ public class Clerk : Person
                                       "-0- To exit this menu\n");
                     pizzaChoice = Int32.Parse(Console.ReadLine());
 
-                    if (pizzaChoice <= 0 || pizzaChoice > 4)
+                    if (pizzaChoice > 0 || pizzaChoice <= 4)
                     {
                         Console.WriteLine("Please select the pizza size :\n" +
                                           "-1- M\n" +
                                           "-2- L\n" +
                                           "-3- XL\n");
                         pizzaSizeChoice = Int32.Parse(Console.ReadLine());
-                        if (pizzaSizeChoice <= 0 || pizzaSizeChoice > 3)
+                        if (pizzaSizeChoice > 0 || pizzaSizeChoice <= 3)
                         {
                             Console.WriteLine("Please select how many pizza you want :");
                             num = Int32.Parse(Console.ReadLine());
@@ -135,14 +135,14 @@ public class Clerk : Person
                                       "-0- To exit this menu\n");
                     drinkChoice = Int32.Parse(Console.ReadLine());
 
-                    if (drinkChoice <= 0 || drinkChoice > 4)
+                    if (drinkChoice > 0 || drinkChoice <= 4)
                     {
                         Console.WriteLine("Please select the drink size :\n" +
                                           "-1- M\n" +
                                           "-2- L\n" +
                                           "-3- XL\n");
                         drinkSizeChoice = Int32.Parse(Console.ReadLine());
-                        if (drinkSizeChoice <= 0 || drinkSizeChoice > 3)
+                        if (drinkSizeChoice > 0 || drinkSizeChoice <= 3)
                         {
                             Console.WriteLine("Please select how many drink you want :");
                             num = Int32.Parse(Console.ReadLine());
@@ -169,6 +169,12 @@ public class Clerk : Person
             }
         } while (choice != 0);
 
+        Console.WriteLine("Order n°" + order.Id + "is completed, now it can be cook");
         return order;
     }
+    
+    
+    
+    
+    
 }
