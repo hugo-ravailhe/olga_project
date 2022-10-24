@@ -40,7 +40,7 @@ public enum DrinkSize
 }
 
 // ******** Class ********
-public abstract class Item
+public class Item
 {
     //******** Attribut ********
     private double _price;
@@ -60,7 +60,7 @@ public abstract class Item
     
     
     //******** Methods ********
-    public abstract void PriceCalculation();
+    public virtual void PriceCalculation() {}
 }
 
 public class Pizza : Item
@@ -102,7 +102,7 @@ public class Pizza : Item
                 _size = PizzaSize.XL;
                 break;
         }
-
+        
         _state = PizzaState.Nothing;
         this.PriceCalculation();
     }
@@ -116,7 +116,11 @@ public class Pizza : Item
     
     
     //******** Getter Setter ********
-    public PizzaName Name { get; set; }
+    public PizzaName Name
+    {
+        get { return _name; }
+        set { this._name = value; }
+    }
     public PizzaSize Size { get; set; }
     public PizzaState State { get; set; }
     
@@ -126,7 +130,7 @@ public class Pizza : Item
     {
         this.Price = Convert.ToDouble(_name) + Convert.ToDouble(_size);
     }
-    
+
     /*static Pizza PizzaChoice(int idName, int idSize)
     {
         PizzaName name = PizzaName.Cannibale;
