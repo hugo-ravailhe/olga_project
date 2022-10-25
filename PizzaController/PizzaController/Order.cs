@@ -21,6 +21,7 @@ public class Order
 
     private int _nextId = 1;
     private int _id;
+    private double _price;
     private DateTime  _dateTime;
     private State _state;
     private Collection _collection;
@@ -44,11 +45,36 @@ public class Order
     }
 
     //******** Getter Setter ********
-    public int Id { get; set; }
-    public DateTime DateTime { get; set; }
-    public State State { get; set; }
-    public Collection Collection { get; set; }
-    public List<Drink> Drinks { get; set; }
+    public int Id 
+    {
+        get { return _id;}
+        set { _id = value; }
+    }
+    public double Price 
+    {
+        get { return _price;}
+        set { _price = value; }
+    }
+    public DateTime DateTime 
+    {
+        get { return _dateTime;}
+        set { _dateTime = value; }
+    }
+    public State State 
+    {
+        get { return _state;}
+        set { _state = value; }
+    }
+    public Collection Collection 
+    {
+        get { return _collection;}
+        set { _collection = value; }
+    }
+    public List<Drink> Drinks
+    {
+        get { return _drinks;}
+        set { _drinks = value; }
+    }
 
     public List<Pizza> Pizzas
     {
@@ -84,11 +110,13 @@ public class Order
     public void AddPizza(Pizza p)
     {
         _pizzas.Add(p);
+        _price += p.Price;
     }
 
     public void AddDrink(Drink d)
     {
         _drinks.Add(d);
+        _price += d.Price;
     }
 }
 

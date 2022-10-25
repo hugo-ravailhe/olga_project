@@ -132,13 +132,15 @@ public class Clerk : Person
                         if (pizzaSizeChoice > 0 || pizzaSizeChoice <= 3)
                         {
                             Pizza pizza = new Pizza(pizzaSizeChoice, pizzaSizeChoice);
-                            Console.WriteLine("Please select how many pizza you want :");
+                            order.AddPizza(pizza);
+                            
+                            /*Console.WriteLine("Please select how many pizza you want :");
                             num = Int32.Parse(Console.ReadLine());
                             
                             for (int i = 0; i < num; i++)
                             {
                                 order.AddPizza(pizza);
-                            }
+                            }*/
                         }
                         else
                         {
@@ -172,14 +174,16 @@ public class Clerk : Person
                         drinkSizeChoice = Int32.Parse(Console.ReadLine());
                         if (drinkSizeChoice > 0 || drinkSizeChoice <= 3)
                         {
-                            Console.WriteLine("Please select how many drink you want :");
-                            num = Int32.Parse(Console.ReadLine());
                             drink = new Drink(drinkChoice, drinkSizeChoice);
+                            order.AddDrink(drink);
+                            /*Console.WriteLine("Please select how many drink you want :");
+                            num = Int32.Parse(Console.ReadLine());
+                            
 
                             for (int i = 0; i < num; i++)
                             {
                                 order.AddDrink(drink);
-                            }
+                            }*/
                         }
                         else
                         {

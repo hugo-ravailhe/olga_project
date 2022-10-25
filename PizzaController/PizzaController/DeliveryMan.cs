@@ -15,8 +15,11 @@ public class DeliveryMan : Person
         await Task.Delay(4000);
         
         Console.WriteLine("Order n°" + order.Id + " is delivered");
+
+        order.State = State.Finished;
+        order.Collection = Collection.Collected;
         
-        Console.WriteLine("Does the customer paid ? (y/n)");
+        /*Console.WriteLine("Does the customer paid ? (y/n)");
 
         string choice = Console.ReadLine();
 
@@ -27,7 +30,22 @@ public class DeliveryMan : Person
         else
         {
             order.Collection = Collection.Lost;
-        }
+        }*/
+        
     }
     
+}
+
+public class Bill
+{
+    private Boolean _paid;
+    private double _price;
+    private Order _order;
+
+    public Bill(Order order)
+    {
+        this._paid = true;
+        this._order = order;
+        this._price = order.Price;
+    }
 }

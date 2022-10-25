@@ -121,8 +121,16 @@ public class Pizza : Item
         get { return _name; }
         set { this._name = value; }
     }
-    public PizzaSize Size { get; set; }
-    public PizzaState State { get; set; }
+    public PizzaSize Size 
+    {
+        get { return _size; }
+        set { this._size = value; }
+    }
+    public PizzaState State 
+    {
+        get { return _state; }
+        set { this._state = value; }
+    }
     
     
     //******** Methods ********
